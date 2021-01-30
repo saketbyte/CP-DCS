@@ -1,3 +1,0 @@
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Union and intersection/cmake-build-debug/CMakeFiles/Union_and_intersection.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Union and intersection/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Union and intersection/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,0 @@
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Maximum and minimum element in array Kadanes algo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Maximum and minimum element in array Kadanes algo/cmake-build-debug/CMakeFiles/Maximum_and_minimum_element_in_array_Kadanes_algo.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Maximum and minimum element in array Kadanes algo/cmake-build-debug/CMakeFiles/edit_cache.dir
