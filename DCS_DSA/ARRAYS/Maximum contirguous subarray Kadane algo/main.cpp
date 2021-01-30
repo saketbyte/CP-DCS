@@ -4,7 +4,7 @@ using namespace std;
 
 int max_sum(int A[], int n)
 {
-    int glob_max=INT_MIN;
+    int glob_max=A[0];
     int cur_max = A[0];
 
     for(int i = 1; i<n;i++)
