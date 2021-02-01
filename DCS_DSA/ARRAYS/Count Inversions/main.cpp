@@ -1,14 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+ * So how did I do this ?
+ * I had to watch several youtube videos and still couldnt understand how they are processing the function calls and the values returned each time.
+ * Solution: Do a dry run of the complete code line by line or atleast of the appraoch.
+ *
+ * Essentially we are doing the merge sort here. All the youtubers and everyone is saying that we will count the number of inversions in two phases:
+ * 1. While sorting we would count how many anomalies from the ascending order occur.
+ * 2. While merging we would count how many across the two sets to be merged the anomalies occur.
+ *
+ * Yes they are two different processes but as far as I could understand, these two processes are being carried out by one and the same counting code during merge.
+ *
+ * As we know the sequence of statements written in the recursive function is very important so based on some analysis and doing editing with the code, I can say that-
+ * 1. The first call to mergeSort is used to count the inversions in the left half of the partitioned tree and the values returned at each call is only "the merging anomalies count"
+ * starting from the very single element merge itself.
+ * 2. The second call to mergeSort is identical except for the fact that this is accounting for the recursions in the right half.
+ * 3. Then finally, however this occurs at each step but yeah, finally the merge function executes at each call to account for the number of anomalies at merging time of left and right half.
+ *
+ * See basically you can not count anything during the partitioning right ? So all the counts are essentially being made during the merging phase of 1-->2-->4-->8 and so on elements.
+ * Starting from the root of the tree, we can move to left left left untill it ends with 1 element on each side, then merge merge merge untill it finishes all the possible merges, then
+ * we move to part with the right right right untull it ends with 1 element on each branch and then merge merge untill it merges with the already sorted left sub-array to be merged with.
+ */
 
-// } Driver Code Ends
 
-
-
-
-
-// Function to find inversion count in the array
 
 #define ll long long
 // Function to find inversion count in the array
@@ -23,19 +38,20 @@ ll merge(ll arr[], ll temp[], ll left,
 
 long long int inversionCount(long long arr[], long long N)
 {
-// Your Code Here
-
     ll temp[N];
     return _mergeSort(arr,temp,0,N-1 );
 }
+
 ll _mergeSort(ll arr[],ll temp[],ll left,ll right){
     ll mid,inver_count=0;
     if(right>left){
         mid=(right+left)/2;
-        inver_count+=_mergeSort(arr,temp,left,mid);
-        inver_count+=_mergeSort(arr,temp,mid+1,right);
+        inver_count+=_mergeSort(arr,temp,left,mid);  // THIS VERY STATEMENT ACCOUNTS FOR ALL THE CALLS TO MANAGE THE LEFT BRANCHING OF THE TREE.
 
-        inver_count+=merge(arr,temp,left,mid+1,right);
+
+        inver_count+=_mergeSort(arr,temp,mid+1,right); // THIS VERY STATEMENT ACCOUNTS FOR ALL THE CALLS TO MANAGE THE RIGHT BRANCHING OF THE TREE.
+
+        inver_count+=merge(arr,temp,left,mid+1,right); // THIS STATEMENT IS EXECUTED FOR EACH MERGING AT EACH CALL OF THE MERGE SORT FUNCTION TO MERGE THE TWO PARTED SUB ARRAYS.
     }
     return inver_count;
 
