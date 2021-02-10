@@ -1,39 +1,34 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using ll = long long;
-const ll MAX_SIZE = 1000009;
+const ll MAX_SIZE = 1000006;
 
 using namespace std;
 
 vector<ll>haiprm(MAX_SIZE , true);
 vector<ll >check(MAX_SIZE);
 vector<ll >prime_no_list;
-vector<ll> lessthan;
+bool prime[MAX_SIZE + 1];
+vector<int>vect;
 
 void wow_prime_finder()
 {
-     int N = MAX_SIZE;
-    haiprm[0] = haiprm[1] = false ;
+     int n = MAX_SIZE;
 
+        memset(prime, true, sizeof(prime));
 
-    for (long long int i=2; i<N ; i++)
-    {
-
-            if (haiprm[i])
+        for (int p = 2; p * p <= n; p++)
+        {
+            if (prime[p] == true)
             {
-                prime_no_list.push_back(i);
-
-                check[i] = i;
+                for (int i = p * p; i <= n; i += p)
+                    prime[i] = false;
             }
-            for (long long int j=0;j < (int)prime_no_list.size() && i*prime_no_list[j] < N && prime_no_list[j] <= check[i];j++)
-            {
-                haiprm[i*prime_no_list[j]]=false;
-                check[i*prime_no_list[j]] = prime_no_list[j] ;
-            }
+        }
+    for (int p = 2; p < n; p++)
+        if (prime[p])
+            vect.push_back(p);
 
-
-
-    }
 
 }
 
@@ -43,21 +38,23 @@ int solve(int x, int y)
     int i ;
     for(i = 0;i<=x;i++)
     {
-        if(prime_no_list[i]>x)
+        if(i>y)
             break;
-        if(prime_no_list[i]==x)
+        if(prime[i]>x)
+            break;
+        if(prime[i]==x)
         {
             i=i+1;
             break;
         }
     }
-    return i;
+
+    if (i > y)
+        printf("Divyam\n");
+    else
+        printf("Chef\n");
 
 }
-
-
-
-
 
 int main()
 {
@@ -81,12 +78,8 @@ int main()
                 printf("Chef\n");
         }
         else {
-            int count = solve(x, y);
-            //cout<<"count"<<count;
-            if (count > y)
-                printf("Divyam\n");
-            else
-                printf("Chef\n");
+            solve(x, y);
+
         }
 
     }
