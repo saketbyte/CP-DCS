@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\Indirect_tree_and_nested_recursions.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\Indirect_tree_and_nested_recursions.dir/objects.a @CMakeFiles\Indirect_tree_and_nested_recursions.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Indirect_tree_and_nested_recursions.dir/objects.a -Wl,--no-whole-archive  -o Indirect_tree_and_nested_recursions.exe -Wl,--out-implib,libIndirect_tree_and_nested_recursions.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Indirect_tree_and_nested_recursions.dir\linklibs.rsp
