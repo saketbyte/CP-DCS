@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Array_and_Strings_basics" targetName="Array_and_Strings_basics" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1566c146-9cbb-49fd-8186-48d2868497b7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1oYbPGWthi7ap8raUBHDxvXXduq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Array_and_Strings_basics" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Array_and_Strings_basics" TARGET_NAME="Array_and_Strings_basics" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Array_and_Strings_basics" RUN_TARGET_NAME="Array_and_Strings_basics">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1566c146-9cbb-49fd-8186-48d2868497b7" name="Default Changelist" comment="" />
+      <created>1613466444520</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613466444520</updated>
+      <workItem from="1613466446923" duration="448000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1491" height="212" key="GridCell.Tab.0.bottom" timestamp="1613466894374">
+      <screen x="0" y="0" width="1536" height="832" />
+    </state>
+    <state width="1491" height="212" key="GridCell.Tab.0.bottom/0.0.1536.832@0.0.1536.832" timestamp="1613466894374" />
+    <state width="1491" height="212" key="GridCell.Tab.0.center" timestamp="1613466894374">
+      <screen x="0" y="0" width="1536" height="832" />
+    </state>
+    <state width="1491" height="212" key="GridCell.Tab.0.center/0.0.1536.832@0.0.1536.832" timestamp="1613466894374" />
+    <state width="1491" height="212" key="GridCell.Tab.0.left" timestamp="1613466894374">
+      <screen x="0" y="0" width="1536" height="832" />
+    </state>
+    <state width="1491" height="212" key="GridCell.Tab.0.left/0.0.1536.832@0.0.1536.832" timestamp="1613466894374" />
+    <state width="1491" height="212" key="GridCell.Tab.0.right" timestamp="1613466894374">
+      <screen x="0" y="0" width="1536" height="832" />
+    </state>
+    <state width="1491" height="212" key="GridCell.Tab.0.right/0.0.1536.832@0.0.1536.832" timestamp="1613466894374" />
+  </component>
+</project>
