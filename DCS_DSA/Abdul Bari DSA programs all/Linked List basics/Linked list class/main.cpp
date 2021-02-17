@@ -12,9 +12,8 @@ public:
 };
 
 class LinkedList{
-private:
-    Node *first;
 public:
+    Node *first;
 
     LinkedList()
     {
@@ -37,7 +36,7 @@ public:
     Node* search(int key);
     void inSorted(int x);
     void dupRem();
-    void join(Node *p, Node *q);
+    void join(Node *p, Node *r);
     void merg(Node *p, Node *q);
 
 
@@ -258,22 +257,58 @@ Node* LinkedList::search(int key)
 }
 
 
-void LinkedList::inSorted(int x)
-{
-    Node *temp;
-    Node *p =first;
-    temp->data =x;
-    temp->next = NULL;
+void LinkedList::inSorted(int x) {
 
-    while( p &&( p->next->data <= x))
+    if(first == NULL)
     {
-        p=p->next;
+        first->data = x;
+        first->next = NULL;
     }
+    else
+    {
+        Node *t = new Node;
+        t->data =x;
 
-    temp->next = p->next;
-    temp = p;
+        Node *p = first;
 
+        while(p->next!=NULL && p->data<x)
+            p=p->next;
+            if(p==first)
+            {
+                t->next = first;
+                first = t;
+            }
+            else {
+                t->next = p->next;
+                p->next = t;
+            }
+
+    }
 }
+void LinkedList::dupRem()
+{
+
+    Node *p = first;
+    Node *q = p->next;
+
+    while(q!=NULL)
+    {
+        if(p->data == q->data)
+        {
+           p->next = q->next;
+           delete q;
+           q = p->next;
+        }
+        else
+        {
+            p=q;
+            q=p->next;
+        }
+
+
+    }
+}
+
 
 
 
@@ -282,21 +317,27 @@ int main()
 {
     int A[] = {2,4,6,8,10,12,14,16,18,20};
 
-    LinkedList L(A, 10);
+    LinkedList L1(A, 10);
 
-    L.display();
-    int a = L.remove(5);
-    L.display();
-    L.insert(5,a);
-    L.display();
-    L.reverseLink();
-    L.display();
-    L.reverseData();
-    L.display();
-    bool t = L.isCycle();
+    L1.display();
+    int a = L1.remove(5);
+    L1.display();
+    L1.insert(5,a);
+    L1.display();
+    L1.reverseLink();
+    L1.display();
+    L1.reverseData();
+    L1.display();
+    bool t = L1.isCycle();
     cout<<t<<endl;
-    L.inSorted(15);
-    L.display();
-
+    L1.inSorted(0);
+    L1.display();
+    L1.inSorted(2);
+    L1.display();
+    L1.dupRem();
+    L1.display();
+    int B[] = { 1,3,5,7,9,11,13,15,17,19};
+    LinkedList L2(B,10);
+    L2.display();
 
 }
