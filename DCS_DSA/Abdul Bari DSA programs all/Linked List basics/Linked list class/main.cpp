@@ -36,7 +36,9 @@ public:
     Node* search(int key);
     void inSorted(int x);
     void dupRem();
+
     void join(Node *p, Node *r);
+
     void merg(Node *p, Node *q);
 
 
@@ -316,8 +318,9 @@ void LinkedList::dupRem()
 int main()
 {
     int A[] = {2,4,6,8,10,12,14,16,18,20};
-
     LinkedList L1(A, 10);
+    int B[] = { 1,3,5,7,9,11,13,15,17,19};
+    LinkedList L2(B,10);
 
     L1.display();
     int a = L1.remove(5);
@@ -336,8 +339,7 @@ int main()
     L1.display();
     L1.dupRem();
     L1.display();
-    int B[] = { 1,3,5,7,9,11,13,15,17,19};
-    LinkedList L2(B,10);
+
     L2.display();
 
 }
