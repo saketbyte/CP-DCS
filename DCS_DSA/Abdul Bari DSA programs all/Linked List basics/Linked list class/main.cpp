@@ -339,7 +339,4 @@ int main()
     L1.display();
     L1.dupRem();
     L1.display();
-
-    L2.display();
-
 }
