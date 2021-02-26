@@ -17,12 +17,13 @@ public:
 
     LinkedList()
     {
+
         first = NULL;
     }
 
     LinkedList(int A[], int n);
 
-    ~LinkedList();
+   // ~LinkedList();
 
     void display();
     int length();
@@ -36,12 +37,8 @@ public:
     Node* search(int key);
     void inSorted(int x);
     void dupRem();
-
-    void join(Node *p, Node *r);
-
-    void merg(Node *p, Node *q);
-
-
+    void jon(Node *p, Node *r);
+    void merg(Node *p, Node *q, Node *third);
 };
 
 
@@ -64,7 +61,7 @@ LinkedList::LinkedList(int A[], int n)
     }
 }
 
-LinkedList::~LinkedList()
+/*LinkedList::~LinkedList()
 {
     Node *p =first;
 
@@ -75,7 +72,7 @@ LinkedList::~LinkedList()
         p=first;
     }
 
-}
+}*/
 
 void LinkedList::display()
 {
@@ -89,7 +86,6 @@ void LinkedList::display()
     }
     cout<<endl;
 }
-
 int LinkedList::length()
 {
     Node *p = first;
@@ -103,7 +99,6 @@ int LinkedList::length()
 return l;
 
 }
-
 void LinkedList::insert(int idx, int val)
 {
 
@@ -133,8 +128,6 @@ void LinkedList::insert(int idx, int val)
         p->next = iNode;
     }
 }
-
-
 int LinkedList::remove(int idx)
 {
     Node *temp = first;
@@ -163,7 +156,6 @@ int LinkedList::remove(int idx)
 
     return del_val_if_needed;
 }
-
 void LinkedList::reverseLink()
 {
     Node *p1 = first;
@@ -179,7 +171,6 @@ void LinkedList::reverseLink()
     }
     first = p2;
 }
-
 void LinkedList::reverseData()
 {
     vector<int> A;
@@ -203,7 +194,6 @@ void LinkedList::reverseData()
         i--;
     }
 }
-
 bool LinkedList::isCycle() {
 
     Node *p, *q;
@@ -218,7 +208,6 @@ bool LinkedList::isCycle() {
 
     return p==q?true:false;
 }
-
 int LinkedList::sum()
 {
     Node *p =first;
@@ -231,7 +220,6 @@ int LinkedList::sum()
     }
     return s;
 }
-
 int LinkedList::max()
 {
     int mx =INT_MIN;
@@ -245,7 +233,6 @@ int LinkedList::max()
     }
     return mx;
 }
-
 Node* LinkedList::search(int key)
 {
     Node *p =first;
@@ -257,8 +244,6 @@ Node* LinkedList::search(int key)
         p=p->next;
     }
 }
-
-
 void LinkedList::inSorted(int x) {
 
     if(first == NULL)
@@ -310,8 +295,20 @@ void LinkedList::dupRem()
 
     }
 }
+void LinkedList::jon(Node *p, Node *r)
+{
+
+    while(p->next)
+        p=p->next;
+
+    if(r!=NULL)
+    p->next = r;
+
+    return;
 
 
+
+}
 
 
 
@@ -339,4 +336,18 @@ int main()
     L1.display();
     L1.dupRem();
     L1.display();
+    L2.display();
+
+   Node *p = L1.first;
+   Node *r = L2.first;
+
+   L1.jon(p,r);
+
+
+
+
+
+
+
+
 }
