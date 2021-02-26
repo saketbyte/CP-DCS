@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Linked List basics/Doubly LinkedList/main.cpp" "E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Linked List basics/Doubly LinkedList/cmake-build-debug/CMakeFiles/Doubly_LinkedList.dir/main.cpp.obj"
+  "E:/LIT CONTENT/Tech/CP-DCS/DCS_DSA/Abdul Bari DSA programs all/Linked List basics/Doubly LinkedList/main.cpp" "E:/LIT CONTENT/Tech/CP-DCS/DCS_DSA/Abdul Bari DSA programs all/Linked List basics/Doubly LinkedList/cmake-build-debug/CMakeFiles/Doubly_LinkedList.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

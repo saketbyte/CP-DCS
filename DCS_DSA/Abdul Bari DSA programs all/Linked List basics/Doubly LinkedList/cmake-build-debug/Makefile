@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "E:\LIT CONTENT\Tech\MY CP\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList"
+CMAKE_SOURCE_DIR = "E:\LIT CONTENT\Tech\CP-DCS\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "E:\LIT CONTENT\Tech\MY CP\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug"
+CMAKE_BINARY_DIR = "E:\LIT CONTENT\Tech\CP-DCS\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\LIT CONTENT\Tech\MY CP\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles" "E:\LIT CONTENT\Tech\MY CP\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\LIT CONTENT\Tech\CP-DCS\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles" "E:\LIT CONTENT\Tech\CP-DCS\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\LIT CONTENT\Tech\MY CP\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\LIT CONTENT\Tech\CP-DCS\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target

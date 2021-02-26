@@ -43,10 +43,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "E:\LIT CONTENT\Tech\MY CP\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList"
+CMAKE_SOURCE_DIR = "E:\LIT CONTENT\Tech\CP-DCS\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "E:\LIT CONTENT\Tech\MY CP\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug"
+CMAKE_BINARY_DIR = "E:\LIT CONTENT\Tech\CP-DCS\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -73,14 +73,14 @@ clean: CMakeFiles/Doubly_LinkedList.dir/clean
 CMakeFiles/Doubly_LinkedList.dir/all:
 	$(MAKE) -f CMakeFiles\Doubly_LinkedList.dir\build.make CMakeFiles/Doubly_LinkedList.dir/depend
 	$(MAKE) -f CMakeFiles\Doubly_LinkedList.dir\build.make CMakeFiles/Doubly_LinkedList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\LIT CONTENT\Tech\MY CP\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target Doubly_LinkedList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\LIT CONTENT\Tech\CP-DCS\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target Doubly_LinkedList"
 .PHONY : CMakeFiles/Doubly_LinkedList.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Doubly_LinkedList.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\LIT CONTENT\Tech\MY CP\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\LIT CONTENT\Tech\CP-DCS\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles" 2
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Doubly_LinkedList.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\LIT CONTENT\Tech\MY CP\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\LIT CONTENT\Tech\CP-DCS\DCS_DSA\Abdul Bari DSA programs all\Linked List basics\Doubly LinkedList\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/Doubly_LinkedList.dir/rule
 
 # Convenience name for target.

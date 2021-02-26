@@ -1,4 +1,4 @@
-# Install script for directory: E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Linked List basics/Doubly LinkedList
+# Install script for directory: E:/LIT CONTENT/Tech/CP-DCS/DCS_DSA/Abdul Bari DSA programs all/Linked List basics/Doubly LinkedList
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Linked List basics/Doubly LinkedList/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/LIT CONTENT/Tech/CP-DCS/DCS_DSA/Abdul Bari DSA programs all/Linked List basics/Doubly LinkedList/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
