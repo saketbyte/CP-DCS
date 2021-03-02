@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/LIT CONTENT/Tech/CP-DCS/DCS_DSA/Abdul Bari DSA programs all/All sorting algo/Merge Sort/main.cpp
+iostream
+-
+bits/stdc++.h
+-
+
