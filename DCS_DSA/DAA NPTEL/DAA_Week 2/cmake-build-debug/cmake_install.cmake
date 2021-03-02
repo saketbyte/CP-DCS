@@ -1,4 +1,4 @@
-# Install script for directory: E:/LIT CONTENT/Tech/MY CP/c++/DAA_Week 2
+# Install script for directory: E:/LIT CONTENT/Tech/CP-DCS/DCS_DSA/DAA NPTEL/DAA_Week 2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/LIT CONTENT/Tech/MY CP/c++/DAA_Week 2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/LIT CONTENT/Tech/CP-DCS/DCS_DSA/DAA NPTEL/DAA_Week 2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

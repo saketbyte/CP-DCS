@@ -22,7 +22,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="ProjectId" id="1oX4rPjIuh1A1BQ7zOws8Yt6ugN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,6 +33,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="DAA_Week_2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="DAA_Week_2" TARGET_NAME="DAA_Week_2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="DAA_Week_2" RUN_TARGET_NAME="DAA_Week_2">
@@ -52,7 +53,18 @@
       <option name="presentableId" value="Default" />
       <updated>1613419799197</updated>
       <workItem from="1613419800550" duration="5000" />
+      <workItem from="1614680280747" duration="1165000" />
+      <workItem from="1614682151433" duration="38000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="921" y="157" key="FileChooserDialogImpl" timestamp="1614682172946">
+      <screen x="0" y="0" width="1536" height="832" />
+    </state>
+    <state x="921" y="157" key="FileChooserDialogImpl/0.0.1536.832@0.0.1536.832" timestamp="1614682172946" />
   </component>
 </project>

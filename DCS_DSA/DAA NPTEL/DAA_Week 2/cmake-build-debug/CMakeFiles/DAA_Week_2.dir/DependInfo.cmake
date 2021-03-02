@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "E:/LIT CONTENT/Tech/MY CP/c++/DAA_Week 2/main.cpp" "E:/LIT CONTENT/Tech/MY CP/c++/DAA_Week 2/cmake-build-debug/CMakeFiles/DAA_Week_2.dir/main.cpp.obj"
+  "E:/LIT CONTENT/Tech/CP-DCS/DCS_DSA/DAA NPTEL/DAA_Week 2/main.cpp" "E:/LIT CONTENT/Tech/CP-DCS/DCS_DSA/DAA NPTEL/DAA_Week 2/cmake-build-debug/CMakeFiles/DAA_Week_2.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
