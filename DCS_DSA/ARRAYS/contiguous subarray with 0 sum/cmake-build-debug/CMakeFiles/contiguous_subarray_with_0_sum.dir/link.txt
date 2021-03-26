@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\contiguous_subarray_with_0_sum.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\contiguous_subarray_with_0_sum.dir/objects.a @CMakeFiles\contiguous_subarray_with_0_sum.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\contiguous_subarray_with_0_sum.dir/objects.a -Wl,--no-whole-archive  -o contiguous_subarray_with_0_sum.exe -Wl,--out-implib,libcontiguous_subarray_with_0_sum.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\contiguous_subarray_with_0_sum.dir\linklibs.rsp

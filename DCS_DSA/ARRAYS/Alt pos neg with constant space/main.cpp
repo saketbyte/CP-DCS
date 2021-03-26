@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-
+/* The logic is simple a negative number is needed at even position and a positive number at odd position. We just check for this to be untrue and then simply swap it with the
+ * next element in unchecked part of array which is supposed to be there. If there is no such element, we simply dont swap and continue.*/
 
 int main() {
     int n ;
