@@ -3,6 +3,29 @@
 
 
 using namespace std;
+/*
+ * This developed my concepts of dynamic programming a little bit. I had learnt this in NPTEL too but it was good to see the application of what I studied. I could not do it on my own.
+ *
+ * So here we prepare a double dimensional array called dp which will have:
+ * rows--> best profit made upto a column_number day by making nth transaction
+ * columns--> representing the best profit made by using row_number of transactions
+ *
+ *                          ith day     ___     ___     ___
+ *          jth_transaction
+ *          0                           0       0       0
+ *          1                           v11     v12     v13
+ *          2
+ *          .
+ *          .
+ *          k
+ *
+ *
+ *
+ *          Now any (i,j) element in the above matrix represents the best profit made uptill ith day using j transactions.
+ *          The (i,j) result will depend upon the (i-1,j) cell and all the cell of j-1 column before i ie in j-1 all behind i.
+ *          So we compare the buying and selling point of the above and check for the best profit made till today.
+ *          I will improve the comments later. TIred rn.
+ */
 
 int main() {
 

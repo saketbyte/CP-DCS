@@ -2,6 +2,18 @@
 using namespace std;
 
 
+
+// left traversal - right traversal
+
+/*
+ * This is a really good solution to above.
+ * In right traversal we check what is the best profit made till today if we had bought on some previous minimum and sold today.
+ * In left traversal we check what is the best profit made till today if we buy today and sell on a value right towards our pointer.
+ *
+ * The left and right combinedly contain two disjoint sets of values which will be having best uptill today and best after today ie two best transactions possible if in buy-sell-buy-sell format.
+ * 
+ */
+
 int main() {
     int n;
     cin >> n;
