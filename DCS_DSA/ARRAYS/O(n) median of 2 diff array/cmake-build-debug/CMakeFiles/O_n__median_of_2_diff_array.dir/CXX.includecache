@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/LIT CONTENT/Tech/CP-DCS/DCS_DSA/ARRAYS/O(n) median of 2 diff array/main.cpp
+iostream
+-
+bits/stdc++.h
+-
+
