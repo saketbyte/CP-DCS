@@ -38,12 +38,21 @@ int main() {
 
         ll A[R][C];
         ll count = 0;
+        ll fi,fj;
 
         for (ll i = 0; i < R; i++)
             for (ll j = 0; j < C; j++) {
                 cin >> A[i][j];
                 if (A[i][j] >= k)
+                {
+                    if(count ==0)
+                    {
+                        fi =i;
+                        fj =j;
+                    }
                     count++;
+
+                }
             }
 
 
@@ -65,13 +74,14 @@ int main() {
 
         ll p = min(R, C);
 
-        ll tli, tlj, rbi, rbj, res;
+        ll tli, tlj, rbi, rbj, res,i=INT_MAX,j=INT_MAX;
 
         if (R != 1 && C != 1 && count !=0)  {
 
             for (ll q = 1; q <= p; q++) {
                 for (tli = 0; tli < R - q; tli++) {
                     for (tlj = 0; tlj < C - q; tlj++) {
+
                         if (tli + q < R)
                             rbi = tli + q;
                         else
@@ -93,16 +103,23 @@ int main() {
                         res = res / ((q + 1) * (q + 1));
 
                         if (res >= k) {
+
+                            if(rbi<i)
+                                i = rbi;
+                            if(rbj<j)
+                                j = rbj;
                             count = count + (C - rbj) ;
-                            // cout<<R-rbi<<" "<<C -rbj<<" "<<sum<<endl;
+
+
+                          /*   cout<<rbi<<" "<<rbj<<" "<<q<<" "<<sum<<endl;
+                             tli++*/;
                             break;
 
                         }
 
 
                     }
-                   /* if(res>=k)
-                        break;*/
+
 
 
                 }
