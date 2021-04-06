@@ -82,14 +82,16 @@ int main() {
                             break;
                         res = aux[rbi][rbj];
 
-                        if (tli > 0)
+//
+                      if (tli > 0)
                             res = res - aux[tli - 1][rbj];
                         if (tlj > 0)
                             res = res - aux[rbi][tlj - 1];
                         if (tli > 0 && tlj > 0)
                             res = res + aux[tli - 1][tlj - 1];
 
-                        int sum = res;
+
+
                         res = res / ((q + 1) * (q + 1));
 
                         if (res >= k) {
