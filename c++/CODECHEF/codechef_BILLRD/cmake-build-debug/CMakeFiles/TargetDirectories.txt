@@ -1,3 +1,0 @@
-E:/LIT CONTENT/MY CP/c++/codechef_BILLRD/cmake-build-debug/CMakeFiles/codechef_BILLRD.dir
-E:/LIT CONTENT/MY CP/c++/codechef_BILLRD/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/LIT CONTENT/MY CP/c++/codechef_BILLRD/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\epowerx_using_recursion.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\epowerx_using_recursion.dir/objects.a @CMakeFiles\epowerx_using_recursion.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\epowerx_using_recursion.dir/objects.a -Wl,--no-whole-archive  -o epowerx_using_recursion.exe -Wl,--out-implib,libepowerx_using_recursion.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\epowerx_using_recursion.dir\linklibs.rsp

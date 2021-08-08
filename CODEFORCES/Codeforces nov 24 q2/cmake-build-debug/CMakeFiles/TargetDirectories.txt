@@ -1,0 +1,3 @@
+E:/LIT CONTENT/MY CP/c++/Codeforces nov 24 q2/cmake-build-debug/CMakeFiles/Codeforces_nov_24_q2.dir
+E:/LIT CONTENT/MY CP/c++/Codeforces nov 24 q2/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/LIT CONTENT/MY CP/c++/Codeforces nov 24 q2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

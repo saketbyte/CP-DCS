@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\String_duplicates_using_bitwise.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\String_duplicates_using_bitwise.dir/objects.a @CMakeFiles\String_duplicates_using_bitwise.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\String_duplicates_using_bitwise.dir/objects.a -Wl,--no-whole-archive  -o String_duplicates_using_bitwise.exe -Wl,--out-implib,libString_duplicates_using_bitwise.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\String_duplicates_using_bitwise.dir\linklibs.rsp

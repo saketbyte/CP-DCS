@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\Codeforces_Nov_24_q1.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Codeforces_Nov_24_q1.dir/objects.a @CMakeFiles\Codeforces_Nov_24_q1.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Codeforces_Nov_24_q1.dir/objects.a -Wl,--no-whole-archive  -o Codeforces_Nov_24_q1.exe -Wl,--out-implib,libCodeforces_Nov_24_q1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Codeforces_Nov_24_q1.dir\linklibs.rsp

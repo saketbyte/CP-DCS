@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(Maximum_and_minimum_element_in_array_Kadanes_algo)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(Maximum_and_minimum_element_in_array_Kadanes_algo main.cpp)

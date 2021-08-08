@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/LIT CONTENT/Tech/CP-DCS/c++/CODECHEF/TCTCTOE May long challenge/main.cpp
+iostream
+-
+bits/stdc++.h
+-
+

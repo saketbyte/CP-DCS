@@ -1,3 +1,0 @@
-E:/LIT CONTENT/MY CP/c++/1450A/cmake-build-debug/CMakeFiles/1450A.dir
-E:/LIT CONTENT/MY CP/c++/1450A/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/LIT CONTENT/MY CP/c++/1450A/cmake-build-debug/CMakeFiles/rebuild_cache.dir

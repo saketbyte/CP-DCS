@@ -1,3 +1,0 @@
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Array and Strings basics/Permutations in a string/cmake-build-debug/CMakeFiles/Permutations_in_a_string.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Array and Strings basics/Permutations in a string/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Array and Strings basics/Permutations in a string/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,3 +1,0 @@
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/merge two sorted array/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/merge two sorted array/cmake-build-debug/CMakeFiles/merge_two_sorted_array.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/merge two sorted array/cmake-build-debug/CMakeFiles/rebuild_cache.dir

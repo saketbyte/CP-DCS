@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/LIT CONTENT/Tech/MY CP/c++/Codechef feb21c MEET/main.cpp
+iostream
+-
+bits/stdc++.h
+-
+

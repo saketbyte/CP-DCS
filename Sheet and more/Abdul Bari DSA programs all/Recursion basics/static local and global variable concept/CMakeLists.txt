@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(static_local_and_global_variable_concept)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(static_local_and_global_variable_concept main.cpp)

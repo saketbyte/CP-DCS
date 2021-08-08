@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/LIT CONTENT/Tech/MY CP/DCS_DSA/ARRAYS/pairs with given sum/main.cpp
+iostream
+-
+algorithm
+-
+bits/stdc++.h
+-
+

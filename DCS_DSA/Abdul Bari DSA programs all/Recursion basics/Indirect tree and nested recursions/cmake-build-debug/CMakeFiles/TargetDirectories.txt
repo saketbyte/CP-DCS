@@ -1,3 +1,0 @@
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Recursion basics/Indirect tree and nested recursions/cmake-build-debug/CMakeFiles/Indirect_tree_and_nested_recursions.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Recursion basics/Indirect tree and nested recursions/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Recursion basics/Indirect tree and nested recursions/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/LIT CONTENT/Tech/CP-DCS/DCS_DSA/DAA NPTEL/DAA_Week3/Adjacency Matrix/main.cpp
+bits/stdc++.h
+-
+

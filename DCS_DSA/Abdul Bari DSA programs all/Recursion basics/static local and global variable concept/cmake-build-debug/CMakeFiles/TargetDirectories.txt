@@ -1,3 +1,0 @@
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Recursion basics/static local and global variable concept/cmake-build-debug/CMakeFiles/static_local_and_global_variable_concept.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Recursion basics/static local and global variable concept/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Recursion basics/static local and global variable concept/cmake-build-debug/CMakeFiles/rebuild_cache.dir

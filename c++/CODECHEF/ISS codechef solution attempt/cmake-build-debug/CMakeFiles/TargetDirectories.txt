@@ -1,3 +1,0 @@
-E:/LIT CONTENT/Tech/CP-DCS/c++/CODECHEF/ISS codechef solution attempt/cmake-build-debug/CMakeFiles/ISS_codechef_solution_attempt.dir
-E:/LIT CONTENT/Tech/CP-DCS/c++/CODECHEF/ISS codechef solution attempt/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/LIT CONTENT/Tech/CP-DCS/c++/CODECHEF/ISS codechef solution attempt/cmake-build-debug/CMakeFiles/rebuild_cache.dir

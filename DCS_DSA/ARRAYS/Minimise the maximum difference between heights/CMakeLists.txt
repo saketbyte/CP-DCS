@@ -1,6 +1,0 @@
-cmake_minimum_required(VERSION 3.16)
-project(Minimise_the_maximum_difference_between_heights)
-
-set(CMAKE_CXX_STANDARD 14)
-
-add_executable(Minimise_the_maximum_difference_between_heights main.cpp)

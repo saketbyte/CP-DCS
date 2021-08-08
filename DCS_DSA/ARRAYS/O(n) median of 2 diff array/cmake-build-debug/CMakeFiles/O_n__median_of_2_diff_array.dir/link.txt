@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\O_n__median_of_2_diff_array.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\O_n__median_of_2_diff_array.dir/objects.a @CMakeFiles\O_n__median_of_2_diff_array.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\O_n__median_of_2_diff_array.dir/objects.a -Wl,--no-whole-archive  -o O_n__median_of_2_diff_array.exe -Wl,--out-implib,libO_n__median_of_2_diff_array.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\O_n__median_of_2_diff_array.dir\linklibs.rsp

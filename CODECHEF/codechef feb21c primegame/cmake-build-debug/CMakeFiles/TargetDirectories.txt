@@ -1,0 +1,3 @@
+E:/LIT CONTENT/Tech/MY CP/c++/codechef feb21c primegame/cmake-build-debug/CMakeFiles/codechef_feb21c_primegame.dir
+E:/LIT CONTENT/Tech/MY CP/c++/codechef feb21c primegame/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/LIT CONTENT/Tech/MY CP/c++/codechef feb21c primegame/cmake-build-debug/CMakeFiles/rebuild_cache.dir

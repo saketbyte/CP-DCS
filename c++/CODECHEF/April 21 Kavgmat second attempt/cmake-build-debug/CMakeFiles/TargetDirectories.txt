@@ -1,3 +1,0 @@
-E:/LIT CONTENT/Tech/CP-DCS/c++/CODECHEF/April 21 Kavgmat second attempt/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/LIT CONTENT/Tech/CP-DCS/c++/CODECHEF/April 21 Kavgmat second attempt/cmake-build-debug/CMakeFiles/April_21_Kavgmat_second_attempt.dir
-E:/LIT CONTENT/Tech/CP-DCS/c++/CODECHEF/April 21 Kavgmat second attempt/cmake-build-debug/CMakeFiles/rebuild_cache.dir

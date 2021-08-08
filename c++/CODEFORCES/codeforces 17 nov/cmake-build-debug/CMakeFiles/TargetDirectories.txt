@@ -1,3 +1,0 @@
-E:/LIT CONTENT/MY CP/c++/codeforces 17 nov/cmake-build-debug/CMakeFiles/codeforces_17_nov.dir
-E:/LIT CONTENT/MY CP/c++/codeforces 17 nov/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/LIT CONTENT/MY CP/c++/codeforces 17 nov/cmake-build-debug/CMakeFiles/rebuild_cache.dir

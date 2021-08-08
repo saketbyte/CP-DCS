@@ -1,3 +1,0 @@
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Recursion basics/fib and ncr using recursion/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Recursion basics/fib and ncr using recursion/cmake-build-debug/CMakeFiles/fib_and_ncr_using_recursion.dir
-E:/LIT CONTENT/Tech/MY CP/DCS_DSA/Abdul Bari DSA programs all/Recursion basics/fib and ncr using recursion/cmake-build-debug/CMakeFiles/rebuild_cache.dir
