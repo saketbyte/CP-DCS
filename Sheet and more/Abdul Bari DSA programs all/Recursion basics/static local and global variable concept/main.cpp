@@ -4,7 +4,7 @@ using namespace std;
  * Global vs Static Variables
 
 
-Global variables are variables which are defined outside the function. The scope of global
+ Global variables are variables which are defined outside the function. The scope of global
  variables begins at the point where they are defined and lasts till the end of the file/program.
  They have external linkage, which means that in other source files, the same name refers to the
  same location in memory.

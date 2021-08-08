@@ -82,7 +82,7 @@ int main()
 /*
  * How does this merge sort work ?
  *
- * So we have three functions main() as usual and mergeSort() and merge.
+ * So we have three functions main() as usual and mergeSort() and merge().
  *
  * The main strategy is to divide until you achieve a single comparison based sorting to avoid multiple comparisons of randomly
  * arranged numbers.

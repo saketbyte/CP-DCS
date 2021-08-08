@@ -16,7 +16,10 @@ int main(){
             number[j+1]=number[j];
             j=j-1;
         }
+        
         number[j+1]=temp;
+    
+   
     }
     for(i=0;i<count;i++)
         printf("%d",number[i]);
