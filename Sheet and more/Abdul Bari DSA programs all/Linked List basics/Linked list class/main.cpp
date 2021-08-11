@@ -124,8 +124,8 @@ void LinkedList::insert(int idx, int val)
         for(int i =0;i<idx-1;i++)
             p = p->next;
 
-        iNode->next = p->next;
-        p->next = iNode;
+        iNode->next = p->next; // Make sure to not lose any information. Link your new node to the idx+1 node and then
+        p->next = iNode;       // link your idx-1 node with new node.
     }
 }
 int LinkedList::remove(int idx)
@@ -148,9 +148,10 @@ int LinkedList::remove(int idx)
         {
             temp = temp->next;
         }
-        Node *temp2 = temp->next;
-        del_val_if_needed = temp2->data;
-        temp->next = temp2->next;
+        Node *temp2 = temp->next; // Now temp2 is the node next to temp
+        del_val_if_needed = temp2->data; // Just storing the deleted data
+        temp->next = temp2->next; // Now we are linking the node behind deleted node with the node which was 
+                                 // next to deleted Node. [-|1] ->[-|del] - >[-|3]  
         delete temp2;
     }
 
