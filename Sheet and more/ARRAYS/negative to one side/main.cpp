@@ -1,6 +1,6 @@
 #include<iostream>
 #include<bits/stdc++.h>
-
+//Two pointer appraoch just swap any positive element on left end with a negative element from right, otherwise taverse accordingly.
 using namespace std;
 void swap(int A[],int l, int r)
 {
