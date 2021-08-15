@@ -8,6 +8,7 @@ public:
         sort(a.begin(), a.end(), [](auto x , auto y)->bool{
          return x[0] < y[0];
         });
+        
         int l = a[0][0], r = a[0][1];
 
         for(int i=1;i<n;i++){
