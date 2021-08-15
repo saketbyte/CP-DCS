@@ -7,7 +7,7 @@
  * If we fail to satisfy this pattern it means there is a scope of improvement to a larger digit.
  *
  * What needs to be done now:
- * 4 3 5 2 1 --> 4 5 3 2 1 --> 4 5 1 2 3
+ * 4 3  5 2 1 --> 4 5 3 2 1 --> 4 5 1 2 3
  * See we first find the index where the pattern fails,by traversing the array from behind. Here we find that 1 2 5
  * and then "3" is that anomalous element.
  * Now we have to find which is the next just smaller element to swap with and then
