@@ -98,7 +98,7 @@ int main()
     createList(A,8);
 
    
-    Node *temp = reverseKgroups(head,8);
+    Node *temp = reverseKgroups(head,2);
 
     cout<<endl;
     cout<<"Groups reversed"<<endl;
