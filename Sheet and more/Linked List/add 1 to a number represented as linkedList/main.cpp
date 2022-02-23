@@ -26,22 +26,7 @@ void printList(Node* node)
 
 
  // } Driver Code Ends
-//User function template for C++
 
-/* 
-
-struct Node
-{
-    int data;
-    struct Node* next;
-    
-    Node(int x){
-        data = x;
-        next = NULL;
-    }
-};
-
-*/
 // SOLUTION
 
 /*
@@ -49,7 +34,8 @@ struct Node
     Use a helper function to execute the task. 
     Now, we will return to previous calls if our node is either null or reached null.
 
-    So the control goes to previous call and checkif the data is 10 after adding one or not and then proceeds to previous calls.
+    So the control goes to previous call and checkif the data is 10 after adding one or not
+    and then proceeds to previous calls.
     It will then finally return to the addOne function and then return the head node.
 */
 class Solution

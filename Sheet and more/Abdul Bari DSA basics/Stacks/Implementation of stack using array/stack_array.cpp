@@ -1,106 +1,127 @@
 #include<iostream>
+#include<stdlib.h>
 
 using namespace std;
 
 class Stack
 {
-    private:
-
-        int capacity;
-        int top;
-        int *Arr;
-
+    
     public:
+    int top;
+        int size;
+        int *S;
 
-        Stack(int size);
-        ~Stack();
-        void push(int x);
-        int pop();
-        int peek();
-        int size();
-        
-        bool isEmpty();
-
+        Stack(int size)
+        {
+            top = -1;
+            S = new int[size];
+        }
+            int capacity();
+            bool push ( int x);
+            int pop ();
+            int peek(int i);
+            bool isEmpty();
+            bool isFull();
 };
 
-
-Stack::Stack(int size)
+bool Stack::isEmpty()
 {
-    capacity = size;
-    Arr = new int[size];
-    top = -1;
+    if(top == -1)
+        {cout<<"Empty Stack"<<endl;
+        return true;}
+    else
+    return false;
 }
 
-
-Stack::~Stack()
+bool Stack::isFull()
 {
-    delete[] Arr;
+    if(top == size -1)
+    {   
+                cout<<"Full Stack"<<endl;
+
+        return true;
+    }
+    else
+    return false;
+}
+
+bool Stack::push(int x)
+{ 
+    if(isFull())
+    {
+        
+        return false;
+
+    }
+    else
+    {
+        S[++top] = x;
+        return true;
+    }
 }
 
 int Stack::pop()
 {
-    int x = -1;
-
-    if(top == -1){
-        cout<<"Underflow"<<endl;
-        return x;
-    }
+    if(isEmpty())
+    {
+        return false;
+}
     else
     {
-        x = Arr[top];
+        int x = S[top];
+        
+        S[top] = 0;
         top--;
         return x;
     }
-
 }
 
-
-void Stack::push(int x)
+int Stack::peek(int i)
 {
-    if(top == capacity-1)
-    {
-        cout<<"Overflow"<<endl;
-    }
+    if(isEmpty() || top <= i-1)
+    {   cout<<"No such index exists. "<<endl;
+        return -1;
+        }
     else
     {
-        top++;
-        Arr[top] = x;
+        return S[top];
+        
     }
 }
-
-int Stack::peek()
-{
-    int x  = 0;
-    // int pos = capacity - idx + 1;
-
-    if(isEmpty() )
-        cout<<"Nothing exists here"<<endl;
-    else
-        x = Arr[top];
-    
-    return x;
+int Stack::capacity() {
+    return top + 1;
 }
-
-
-int Stack::size()
-{
-    return top+1;
-}
-
-bool Stack::isEmpty()
-{
-    return top == -1;
-}
-
-
 int main()
 {
+    Stack A(3);
 
-    Stack S(3);
-    S.push(3);
-    S.push(2);
-    S.pop();
-    S.push(1);
-    S.push(99);
-    cout<<S.peek();
+    A.push(1);
+        cout<<A.top;
+
+    A.push(2);
+    cout<<A.top<<endl;
+        cout<<"popping now";
+
+    A.pop();
+    cout<<A.top;
+
+    A.pop();
+    cout<<A.top;
+    cout<<"pop3";
+    A.pop();
+    cout<<A.top;
+
+    A.push(3);
+     cout<<A.top;
+
+    A.peek(5);
+    A.capacity() ;
+ 
+    A.pop();
+
+ 
+   
+ 
+    return 0;
 }
+

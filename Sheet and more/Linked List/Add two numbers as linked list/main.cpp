@@ -44,21 +44,21 @@ void printList(Node* n)
 
 
  // } Driver Code Ends
-/* node for linked list:
+// node for linked list:
 
-struct Node {
-    int data;
-    struct Node* next;
-    Node(int x) {
-        data = x;
-        next = NULL;
-    }
-};
+// struct Node {
+//     int data;
+//     struct Node* next;
+//     Node(int x) {
+//         data = x;
+//         next = NULL;
+//     }
+// };
 
 
 // ...............................SOLUTION
 
-// Here we ust reverse these lists and do place values align because of this. Now we just do basic arithematic.
+// Here we first reverse these lists and do place values align because of this. Now we just do basic arithematic.
 
 class Solution
 {
@@ -114,6 +114,7 @@ class Solution
         
         l1 = l1->next;
         l2 = l2->next;
+        // making a new list to store sum okay?
         Node *sumList = new Node(sum%10);
         Node *tmp = sumList;
         tmp -> next = NULL;
