@@ -1,131 +1,124 @@
-#include <iostream>
+#include<iostream>
 #include<cstring>
+
 using namespace std;
- 
-class Node{
-public:
+
+
+class Node
+{
+    public:
     char data;
     Node* next;
 };
- 
-class Stack{
-private:
+
+class Stack
+{
     Node* top;
-public:
+    public:
     Stack();
     ~Stack();
     void push(char x);
     char pop();
     char peek(int index);
-    int isEmpty();
-    int isFull();
+
+    bool isEmpty();
+    bool isFull();
     char stackTop();
 };
- 
-Stack::Stack() {
-    top = nullptr;
+
+Stack::Stack()
+{
+    top = NULL;
 }
- 
-Stack::~Stack() {
+
+Stack::~Stack()
+{
     Node* p = top;
     while (top){
         top = top->next;
         delete p;
         p = top;
     }
+
 }
- 
-void Stack::push(char x) {
-    Node* t = new Node;
-    if (t == nullptr){
-        cout << "Stack Overflow!" << endl;
-    } else {
-        t->data = x;
-        t->next = top;
-        top = t;
-    }
+
+void Stack::push(char x)
+{
+    Node *t = new Node();
+        if(t == NULL)
+            cout<<"The heap is full"<<endl;
+        else{
+            t->data = x;
+            t->next = top;
+            top = t;
+        }
 }
- 
-char Stack::pop() {
-    Node* p;
-    char x = -1;
-    if (top == nullptr){
-        cout << "Stack Underflow!" << endl;
-    } else {
-        p = top;
-        x = p->data;
+
+char Stack::pop()
+{   
+    char x;
+    if(!top)
+    cout<<"Empty Stack";
+    
+    else
+    {
+        Node *p = top;
+        x = top->data;
         top = top->next;
         delete p;
+        return x;
+
     }
-    return x;
 }
- 
-int Stack::isFull() {
-    Node* t = new Node;
-    int r = t ? 1 : 0;
-    delete t;
-    return r;
+
+bool Stack::isEmpty()
+{
+    if(top == NULL)
+        {
+            cout<<"Stack is empty"<<endl;
+            return true;
+        }
+    return false;
 }
- 
-int Stack::isEmpty() {
-    return top ? 0 : 1;
+
+bool Stack::isFull()
+{
+    Node *t = new Node();
+    if(t == NULL)
+        {
+            cout<<"Stack is full"<<endl;
+            return true;
+        }
+    else
+        return false;
 }
- 
-char Stack::stackTop() {
-    if (top){
-        return top->data;
-    }
-    return -1;
-}
- 
-char Stack::peek(int index) {
-    if (isEmpty()){
-        return -1;
-    } else {
-        Node* p = top;
- 
-        for (int i=0; p != nullptr && i<index-1; i++){
+
+char Stack::peek(int idx)
+{
+    if(isEmpty())
+    cout<<"Hence, can not peak"<<endl;
+    else
+    {
+        Node *p = top;
+        for( int i = 1; i<idx && p!=NULL;i++)
             p = p->next;
-        }
- 
-        if (p != nullptr){
-            return p->data;
-        } else {
-            return -1;
-        }
+        
+        if(p!= NULL)
+        return p->data;
+        else
+        cout<<"Invalid Index given"<<endl;
     }
+
 }
- 
- 
-int isBalanced(char* exp){
+
+bool isBalanced(char* exp)
+{
     Stack stk;
- 
-    for (int i=0; i<strlen(exp); i++){
-        if (exp[i] == '('){
-            stk.push(exp[i]);
-        } else if (exp[i] == ')'){
-            if (stk.isEmpty()){
-                return false;
-            } else {
-                stk.pop();
-            }
-        }
+
+    for(int i =0; i<strlen(exp);i++)
+    {
+        =p
     }
-    return stk.isEmpty() ? true : false;
 }
- 
- 
-int main() {
- 
-    char E[] = "((a+b)*(c-d))";
-    cout << isBalanced(E) << endl;
- 
-    char F[] = "((a+b)*(c-d)))";
-    cout << isBalanced(F) << endl;
- 
-    char G[] = "(((a+b)*(c-d))";
-    cout << isBalanced(G) << endl;
- 
-    return 0;
- 
-}
+
+

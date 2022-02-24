@@ -5,9 +5,9 @@ using namespace std;
 
 class Stack
 {
-    
-    public:
     int top;
+    public:
+    
         int size;
         int *S;
 
@@ -96,24 +96,18 @@ int main()
     Stack A(3);
 
     A.push(1);
-        cout<<A.top;
 
     A.push(2);
-    cout<<A.top<<endl;
         cout<<"popping now";
 
     A.pop();
-    cout<<A.top;
+
 
     A.pop();
-    cout<<A.top;
     cout<<"pop3";
     A.pop();
-    cout<<A.top;
 
     A.push(3);
-     cout<<A.top;
-
     A.peek(5);
     A.capacity() ;
  
