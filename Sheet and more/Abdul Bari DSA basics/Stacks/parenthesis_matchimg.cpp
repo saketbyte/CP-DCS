@@ -20,7 +20,7 @@ class Stack
     void push(char x);
     char pop();
     char peek(int index);
-
+    void display();
     bool isEmpty();
     bool isFull();
     char stackTop();
@@ -58,7 +58,9 @@ char Stack::pop()
 {   
     char x;
     if(!top)
+    {
     cout<<"Empty Stack";
+    }
     
     else
     {
@@ -73,12 +75,7 @@ char Stack::pop()
 
 bool Stack::isEmpty()
 {
-    if(top == NULL)
-        {
-            cout<<"Stack is empty"<<endl;
-            return true;
-        }
-    return false;
+    return top ? false : true;
 }
 
 bool Stack::isFull()
@@ -110,6 +107,15 @@ char Stack::peek(int idx)
     }
 
 }
+void Stack::display()
+{
+    Node *t = top;
+    while(t)
+    {
+        cout<<t->data<<endl;
+        t =t->next;
+    }
+}
 
 bool isBalanced(char* exp)
 {
@@ -117,8 +123,62 @@ bool isBalanced(char* exp)
 
     for(int i =0; i<strlen(exp);i++)
     {
-        =p
+        char x = exp[i];
+
+        if(x == '[' || x == '{' || x == '(')
+            {   stk.push(x);
+            }
+        else
+        {
+            if(stk.isEmpty())
+                return false;
+        // the heirarchy of the braces is maintained by the order in which this switch case is being
+        // dealt with.
+            switch(exp[i]){
+
+                case ')':
+                    x = stk.pop();
+                    if(x!= '(')
+                        return false;
+                    break;
+                
+                case '}':
+                    x = stk.pop();
+                    if(x!= '{')
+                        return false;
+                    break;
+
+                case ']':
+                    x = stk.pop();
+                    if(x!= '[')
+                        return false;
+                    break;
+            }
+
+        }        
     }
+    return stk.isEmpty();
+}
+
+int main()
+{
+
+    // Stack s;
+    // s.push('a');
+    // s.push('b');
+    // cout<<s.pop();
+    // cout<<s.pop();
+    // cout<<s.isEmpty();
+    char A[] = "((a+b)*(c-d))";
+    cout << isBalanced(A) << endl;
+
+    char E[] = "[{()}]";
+    cout << isBalanced(E) << endl;
+
+    char F[] = "[{)}]";
+    cout << isBalanced(E) << endl;
+ 
+ 
 }
 
 
