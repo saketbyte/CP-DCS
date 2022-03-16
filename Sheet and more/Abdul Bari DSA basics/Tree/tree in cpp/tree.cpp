@@ -14,7 +14,7 @@ private:
     int size;
     int front;
     int rear;
-    Node** Q;  // [Node*]*: Pointer to [Pointer to Node]
+    Node** Q;  // [Node*]*: Pointer to [Pointer to Node which are stored in the QUEUE]
 public:
     Queue(int size);
     ~Queue();
