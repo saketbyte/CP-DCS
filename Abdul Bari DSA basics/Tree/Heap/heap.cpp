@@ -1,15 +1,18 @@
 #include<iostream>
+
 using namespace std;
 
 
 void insert(int A[], int n)
 {
-    int i =n;
-    int temp =0;
-
-
+    int i = n;
+    int temp = 0;
     temp = A[i];
-    while(i>1 && temp>A[i/2])
+
+
+    while(i>1 && temp>A[i/2]) // this is to run the loop for  i>1 and to have our element to be inserted
+                              // when it is just less than an element in heap, then at that index we fill
+                              // the element with i.
     {
         A[i] = A[i/2];
         i = i/2;
@@ -27,7 +30,7 @@ int popElement(int A[], int n)
     A[n] = val;
     
 
-    i = 1; j = i*2;
+    i = 1; j = i*2; // starting from first index and the left child.
 
     while(j<=n-1)
     {
