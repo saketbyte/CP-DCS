@@ -1,0 +1,66 @@
+class Solution{
+public:
+    Node* divide(int N, Node *head){
+        // code here
+        
+        Node *end = head;
+        Node *itr = head;
+        Node *prev = NULL;
+        
+        Node *newHead = head;
+        
+        while(end->next!=NULL)
+        {
+            if(newHead->data %2 != 0 && end->data %2 == 0)
+                newHead = newHead->next;
+        
+            end = end->next;
+        }   
+        
+        Node* newEnd = end;
+        
+        do
+        {
+            if(itr->data % 2 == 0)
+                {
+                   prev = itr;
+                   itr = itr->next;
+                }
+            else
+            {   
+                
+                newEnd->next = itr;
+                if(prev!=NULL)
+                {
+                    prev->next = itr->next;
+                
+                
+                Node* temp = itr;
+                
+                itr=itr->next;
+                temp->next = NULL;
+                }
+                else
+                {
+                    newEnd->next = itr;
+                    Node* temp = itr;
+                
+                itr=itr->next;
+                temp->next = NULL;
+                    
+                }
+                
+                // newEnd -> next = itr;
+                // newEnd = newEnd->next;
+                // prev->next = itr->next;
+                // itr = itr->next;
+                // prev = prev->next;
+                // newEnd->next = NULL;
+                
+            }
+        }while(itr!=end);
+        
+        return newHead;
+        
+    }
+};
