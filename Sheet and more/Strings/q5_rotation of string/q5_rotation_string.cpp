@@ -1,46 +1,43 @@
-#include <bits/stdc++.h>
+
+# include <bits/stdc++.h>
 using namespace std;
 
-bool check_rotation(string s, string goal)
+bool areRotations(string str1, string str2)
 {
-	if (s.size() != goal.size())
+if (str1.length() != str2.length())
 		return false;
 
-        
-	queue<char> q1;
-	for (int i = 0; i < s.size(); i++) {
-		q1.push(s[i]);
-	}
-	queue<char> q2;
-	for (int i = 0; i < goal.size(); i++) {
-		q2.push(goal[i]);
-	}
-	int k = goal.size();
-	while (k--) {
-		char ch = q2.front();
-		q2.pop();
-		q2.push(ch);
-		if (q2 == q1)
-			return true;
-	}
-	return false;
+string temp = str1 + str1;
+return (temp.find(str2) != string::npos);
 }
+// https://cplusplus.com/reference/string/string/npos/
+/*
+String find is used to find the first occurrence of sub-string in the
+ specified string being called upon. It returns the index of the first 
+ occurrence of the substring in the string from given starting position.
+  The default value of starting position is 0.
+
+  Function parameters:
+
+str : The sub-string to be searched.
+s : The sub-string to be searched, given as C style string.
+pos : The initial position from where the string search is to begin.
+Function Return:
+
+The function returns the index of the first occurrence of sub-string,
+ if the sub-string is not found it returns string::npos
+ (string::pos is static member with value as the highest possible 
+ for the size_t data structure).
+
+
+*/
+
 int main()
 {
-	string s1 = "ABCD";
-	string s2 = "CDAB";
-	if (check_rotation(s1, s2))
-		cout << s2 << " is a rotated form of " << s1
-			<< endl;
-	else
-		cout << s2 << " is not a rotated form of " << s1
-			<< endl;
-	string s3 = "ACBD";
-	if (check_rotation(s1, s3))
-		cout << s3 << " is a rotated form of " << s1
-			<< endl;
-	else
-		cout << s3 << " is not a rotated form of " << s1
-			<< endl;
-	return 0;
+string str1 = "AACD", str2 = "ACDA";
+if (areRotations(str1, str2))
+	printf("Strings are rotations of each other");
+else
+	printf("Strings are not rotations of each other");
+return 0;
 }
