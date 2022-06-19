@@ -1,3 +1,8 @@
+// Another very cool approach - https://leetcode.com/problems/k-th-symbol-in-grammar/discuss/113705/JAVA-one-line
+
+// Given code is based on Aditya Verma solution on YT
+
+
 class Solution {
 public:
     int kthGrammar(int n, int k) {
