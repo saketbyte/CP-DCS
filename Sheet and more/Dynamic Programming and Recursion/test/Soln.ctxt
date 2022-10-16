@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Soln
+comment0.text=\r\nwhile\ this\ should\ theoretically\ work\ on\ all\ platforms,\ it\ has\ only\ been\ tested\ on\ linux\r\ncompile\ by\ running\r\njavac\ Soln.java\r\nRun\ with\r\njava\ Soln\ hostname\ port\r\n
+comment1.params=reader
+comment1.target=java.lang.String\ s_readline(java.io.InputStreamReader)
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+numComments=3
