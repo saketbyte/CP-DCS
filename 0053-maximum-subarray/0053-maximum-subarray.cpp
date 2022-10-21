@@ -6,9 +6,11 @@ public:
         
         int curr_max = 0;
         int max_so_far = INT_MIN;
+        int al_neg = INT_MIN;
         
         for(int i = 0; i<n;i++)
         {
+            al_neg = max(al_neg, nums[i]);
             curr_max += nums[i];
             
             if(curr_max>max_so_far)
@@ -19,7 +21,7 @@ public:
             
         }
         
-        return max_so_far;
+        return max(max_so_far,al_neg);
         
         
     }
