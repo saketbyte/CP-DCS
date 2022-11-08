@@ -5,6 +5,7 @@ public:
         // Score = A[i] + i + A[j] - j
         // The logic is to find maximum first half, 
         // and the maximum second half possible and add them.
+        // Make sure to not chosee when i == j
         
         int n = A.size();
         int start =A[0] + 0;
