@@ -1,22 +1,7 @@
 class Solution {
 public:
     
-//      int solve( vector<int> ans, vector<int> dp, int n)
-//     {
-//          if(n==0) return ans[n];
-    
-//           if(n<0) return 0;
-    
-//          if(dp[n]!=-1) return dp[n];
-    
-//          int left = ans[n] + solve(ans , dp , n-2);
-    
-//          int right =0 + solve(ans , dp , n-1);
-    
-//          return dp[n]=max(left , right);
-        
-//     }
-    int rob(vector<int>& arr)
+      int rob(vector<int>& arr)
     {
         vector<int> dp(arr.size(),-1);
         int n = arr.size();
