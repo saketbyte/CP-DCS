@@ -1,19 +1,10 @@
 vector<int> mem(46,-1);
 class Solution {
 public:
-    
-//     int solve(vector<int>mem, int n)
-//     {
-        
-    
-//     }
+
     
     int climbStairs(int n) {
-        
-//     vector<int> mem(46,-1);
-
-//        return solve(mem, n);
-        
+          
         
        if(n==1 || n==2 )
            return mem[n] = n;
