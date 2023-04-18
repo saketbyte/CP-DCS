@@ -2,7 +2,7 @@ class Solution {
 public:
     int maxScoreSightseeingPair(vector<int>& A) {
         
-        // Score = A[i] + i + A[j] - j
+        // Score = A[i] - i + A[j] + j
         // The logic is to find maximum first half, 
         // and the maximum second half possible and add them.
         // Make sure to not chosee when i == j
