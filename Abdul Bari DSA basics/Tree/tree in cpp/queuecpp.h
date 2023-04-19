@@ -1,10 +1,19 @@
+class Node{
+public:
+    Node* lchild;
+    int data;
+    Node* rchild;
+};
+ 
+
 class Queue{
 private:
     int size;
     int front;
     int rear;
     Node** Q;  // [Node*]*: Pointer to [Pointer to Node which are stored in the QUEUE]
-               // https://stackoverflow.com/questions/27281393/constructing-a-binary-tree-using-queue-in-c
+                // https://stackoverflow.com/questions/27281393/constructing-a-binary-tree-using-queue-in-c#:~:text=If%20you%20wanted,be%20set%20later.
+               // https://stackoverflow.com/questions/27281393/constructing-a-binary-tree-using-queue-in-c#:~:text=I%20am%20just,4%2C%202014%20at
 public:
     Queue(int size);
     ~Queue();
@@ -12,7 +21,7 @@ public:
     bool isFull();
     bool isEmpty();
 
-    void enqueue(Node* x);
+    void enqueue(Node* );
     Node* dequeue();
 };
  

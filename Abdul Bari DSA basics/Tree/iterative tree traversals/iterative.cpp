@@ -133,7 +133,7 @@ void Tree::iterativePreorder(Node *p) {
             2. Stack might be empty but we still have more nodes to trace in the same branch. 
         */
         if (p != nullptr){
-            //  Visit the node aka root, print data and store its address so we can trace back via stack
+            // Visit the node aka root, print data and store its address to trace back via stack
             // and move to the left child after root.
             cout << p->data << ", " << flush;
             stk.emplace(p);
@@ -143,10 +143,11 @@ void Tree::iterativePreorder(Node *p) {
             // so now we need to trace back using the stack of addresses. 
             // so move to it's right child and wait for next iteration when it goes to the 
             // if block to print.
-            // basically if p is null then pop out address and move to its right child.
+            
             p = stk.top();
             stk.pop();
             p = p->rchild;
+            // basically if p is null then pop out address and move to its right child.
         }
     }
     cout << endl;
@@ -154,11 +155,14 @@ void Tree::iterativePreorder(Node *p) {
  
 void Tree::iterativeInorder(Node *p) {
     stack<Node*> stk;
-    while (p != nullptr || ! stk.empty()){
+    while (p != nullptr || ! stk.empty())
+    {
         if (p != nullptr){
             stk.emplace(p);
             p = p->lchild;
-        } else {
+        } 
+        
+        else {
             p = stk.top();
             stk.pop();
             cout << p->data << ", " << flush;
