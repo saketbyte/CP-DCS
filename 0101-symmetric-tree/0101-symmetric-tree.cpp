@@ -13,53 +13,50 @@ class Solution {
 public:
     bool isSymmetric(TreeNode* root) {
         
-         return isSymmetricTest(root->left,root->right);
-    }
-    
-    bool isSymmetricTest(TreeNode* p , TreeNode* q){
+        // TreeNode *l = root->left;
+        // TreeNode *r = root->right;
         
-        if(p == NULL && q == NULL) return true;
-        if(p == NULL)return false;
-        if(q == NULL) return false;
-        queue<TreeNode*>q1, q2;
+        if(root->left == NULL && root->right == NULL) return true;
+        if(root->left == NULL || root->right == NULL )return false;
         
-        q1.push(p);
-        q2.push(q);
-        while(!q1.empty() || !q2.empty()){
-            TreeNode* a1 = q1.front();
-            TreeNode* a2 = q2.front();
-            
-            if(a1-> val != a2->val) return false; // not a same tree
+        queue<TreeNode*> q1,q2;
+        q1.push(root->left);
+        q2.push(root->right);
+        TreeNode *a1, *a2;
+        
+        while(!q1.empty() && !q2.empty())
+        {
+            a1 = q1.front();
+            a2 = q2.front();
             q1.pop();
             q2.pop();
-            //check for there left and right subtrees 
-            if(a1->left  && a2->right ){
+            
+            if(a1->val!=a2->val)
+                return false;
+            
+            if(a1->left && a2->right)
+            {
                 q1.push(a1->left);
                 q2.push(a2->right);
             }
-            else if(a1->left || a2->right){
-                return false;
-                
-            }
-            if(a1->right && a2->left){
+            else
+                if(a1->left || a2->right)
+                    return false;
+            
+            if(a1->right && a2->left)
+            {
                 q1.push(a1->right);
                 q2.push(a2->left);
             }
-            else if ( a1->right || a2->left){
-                 return false;
-            }
+            else
+                if(a1->right || a2->left)
+                    return false;            
+            
         }
+        
         return true;
         
-//         if(p == NULL && q == NULL) //left & right node is NULL 
-//             return true; 
         
-//         else if(p == NULL || q == NULL) //one of them is Not NULL
-//             return false; 
         
-//         else if(p->val!=q->val) 
-//             return false;
-        
-//         return isSymmetricTest(p->left,q->right) && isSymmetricTest(p->right,q->left); //comparing left subtree's left child with right subtree's right child --AND-- comparing left subtree's right child with right subtree's left child
     }
 };
