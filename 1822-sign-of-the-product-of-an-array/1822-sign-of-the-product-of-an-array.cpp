@@ -4,13 +4,11 @@ public:
        
         int sign = 1;
         
-        for(auto i: nums)
+        for(int i: nums)
         {
             if(i<0)
-                sign*=-1;
-            else if(i>0)
-                sign*=1;
-            else
+                sign=-sign;
+            else if(i==0)
             {
                 sign =0;
                 break;
