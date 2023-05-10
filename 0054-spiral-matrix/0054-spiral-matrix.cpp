@@ -1,37 +1,23 @@
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
-        int left = 0;
-        int right = matrix[0].size()-1;
-        int top = 0;
-        int bottom = matrix.size()-1;
-        vector<int> res;
-        int i;
-        while(left <= right and top <= bottom) {
-            // traverse from left to right in the top row
-            for(i = left; i <= right; i++) {
-                res.push_back(matrix[top][i]);
-            }
-            // now that top row is done,decrement the top pointer
-            top++;
-            // traverse from top to bottom in the rightmost column
-            for(i = top; i <= bottom; i++) {
-                res.push_back(matrix[i][right]);
-            }
-            right--;
-            if(left > right || top > bottom) break;
-            // traverse from right to left in the bottom row
-            for(i = right; i >= left; i--) {
-                res.push_back(matrix[bottom][i]);
-            }
-            bottom--;
-            // // traverse from bottom to top in the left most column
-            for(i=bottom; i >= top; i--) {
-                res.push_back(matrix[i][left]);
-            }
-            left++;
+         vector<vector<int> > dirs{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+    vector<int> res;
+    int nr = matrix.size();     if (nr == 0) return res;
+    int nc = matrix[0].size();  if (nc == 0) return res;
+    
+    vector<int> nSteps{nc, nr-1};
+    
+    int iDir = 0;   // index of direction.
+    int ir = 0, ic = -1;    // initial position
+    while (nSteps[iDir%2]) {
+        for (int i = 0; i < nSteps[iDir%2]; ++i) {
+            ir += dirs[iDir][0]; ic += dirs[iDir][1];
+            res.push_back(matrix[ir][ic]);
         }
-        
-        return res;
+        nSteps[iDir%2]--;
+        iDir = (iDir + 1) % 4;
+    }
+    return res;
     }
 };
