@@ -1,29 +1,33 @@
 class Solution {
 public:
+   void reverse(vector<int>& nums, int s, int e) {
+        while(s < e) {
+            swap(nums[s++], nums[e--]);
+        }
+    }
+    
+    public:
     void nextPermutation(vector<int>& nums) {
-        
         int n = nums.size();
-        int ano = n-1;
-        
-        while(ano >0 && nums[ano] <= nums[ano-1])
-        {
-            ano--;
-        }
-        if(ano == 0 )
-        {
-            reverse(nums.begin(), nums.end());
-        }
-        else
-        {
-            int pin = n-1;
-            
-            while(pin>ano && nums[pin]<=nums[ano-1])
-            {
-                pin--;
+
+        int index = -1;
+        for(int i = n-2; i >= 0; i--) { // TC: O(n)
+            if(nums[i] < nums[i+1]) {
+                index = i;
+                break;
             }
-            swap(nums[ano-1], nums[pin]);
-            reverse(nums.begin()+ano, nums.end());
         }
         
+        if(index != -1) {
+            for(int i=n-1;i>index;i--){ // TC: O(n)
+                if(nums[i]>nums[index]){
+                    swap(nums[i],nums[index]);
+                    break;
+                }
+            }
+            
+        }
+
+        reverse(nums, index+1, n-1); // TC: O(n)
     }
 };
