@@ -1,45 +1,37 @@
-
 class Solution {
 public:
-    
-  
-    
-  int solve(vector<int>& coins, vector<vector<int>> &memo, int n, int target)
-{
-        if(n==0)
-        {
-            if(target%coins[n]==0)
-            {
-                return 1;
-            }
-            return 0;
-        }
-        if(target==0)
-        {
+   int change(int amount, vector<int>& coins) {
+        int n = coins.size();
+        if(amount == 0) {
             return 1;
         }
-		// Till here, the explanation is same as the recursive solution
-        if(memo[n][target]!=-1) // Here comes the role of memoization. Since we initialised the memo grid with -1, if a function call that is made and was stored in the grid is called again, we directly retrieve it
+        if(n==0)
+          return 0;
+        vector<vector<int>> dp;
+        dp.resize(n+2,vector<int>(amount+2,-1));
+        
+        for(int i=0;i<n+1;i++)
         {
-            return memo[n][target];
+            dp[i][0] = 1;
         }
-        int dontpick = solve(coins, memo, n-1, target);
-        int pick = 0;
-        if(coins[n]<=target)
+        
+        for(int i=0;i<amount+1;i++)
         {
-            pick = solve(coins, memo, n, target-coins[n]);
+            dp[0][i] = 0;
         }
-		// Same explanation of the above 3 steps like recursion
-        return memo[n][target] = pick + dontpick; // We store all the calculated values in the memo grid
-}
-int change(int amount, vector<int>& coins) {
-        if(amount==0) // If the amount is 0, then we have one way(to not choose an element at all)
+        
+        for(int i=1;i<n+1;i++)
         {
-            return 1; // So return 1
+            for(int j=1;j<amount+1;j++)
+            {
+                if(coins[i-1] > j) {
+                    dp[i][j] = dp[i-1][j];
+                } else {
+                    dp[i][j] = dp[i-1][j]+dp[i][j-coins[i-1]];
+                }
+            }
         }
-        int n = coins.size();
-        vector<vector<int>> dp(n, vector<int>(amount+1, -1)); // We create a 2D vector with n rows
-		// which denote the coin denominations and amount+1 columns (0 to amount)
-		return solve(coins, dp, n-1, amount); // Call the function
-}
+        return dp[n][amount];
+        
+    }
 };
