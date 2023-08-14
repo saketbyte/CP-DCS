@@ -1,36 +1,32 @@
 class Solution {
 public:
-     int findKthLargest(vector<int>& nums, int k) {
-        int left = 0, right = nums.size() - 1, kth;
+     int findKthLargest(std::vector<int>& nums, int k) {
+        int left = 0, right = nums.size() - 1;
         while (true) {
-            int idx = partition(nums, left, right);
-            if (idx == k - 1) {
-                kth = nums[idx];
-                break;
-            }
-            if (idx < k - 1) {
-                left = idx + 1;
+            int pivot_index = rand() % (right - left + 1) + left;
+            int new_pivot_index = partition(nums, left, right, pivot_index);
+            if (new_pivot_index == nums.size() - k) {
+                return nums[new_pivot_index];
+            } else if (new_pivot_index > nums.size() - k) {
+                right = new_pivot_index - 1;
             } else {
-                right = idx - 1;
+                left = new_pivot_index + 1;
             }
         }
-        return kth;
     }
+
 private:
-    int partition(vector<int>& nums, int left, int right) {
-        int pivot = nums[left], l = left + 1, r = right;
-        while (l <= r) {
-            if (nums[l] < pivot && nums[r] > pivot) {
-                swap(nums[l++], nums[r--]);
-            }
-            if (nums[l] >= pivot) {
-                l++;
-            }
-            if (nums[r] <= pivot) {
-                r--;
+    int partition(std::vector<int>& nums, int left, int right, int pivot_index) {
+        int pivot = nums[pivot_index];
+        std::swap(nums[pivot_index], nums[right]);
+        int stored_index = left;
+        for (int i = left; i < right; i++) {
+            if (nums[i] < pivot) {
+                std::swap(nums[i], nums[stored_index]);
+                stored_index++;
             }
         }
-        swap(nums[left], nums[r]);
-        return r;
+        std::swap(nums[right], nums[stored_index]);
+        return stored_index;
     }
 };
