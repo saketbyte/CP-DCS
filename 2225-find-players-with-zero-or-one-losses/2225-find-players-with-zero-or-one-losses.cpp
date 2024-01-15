@@ -1,22 +1,23 @@
 class Solution {
 public:
-    vector<vector<int>> findWinners(vector<vector<int>>& matches) {
-        
-         map<int,int> lost;
-        for (auto m : matches)
-        {
-            if (!lost.count(m[0])) lost[m[0]] = 0;
-            lost[m[1]]++;
+    vector<vector<int>> findWinners(vector<vector<int>>& mat) {
+         vector<int> l0,l1;
+        int n=mat.size();
+        map<int,pair<int,int>> map;//player win loss
+        for(auto it:mat){
+            int winner=it[0],loser=it[1];
+            map[winner].first++;
+            map[loser].second++;
         }
-        
-        vector<int> zero, ones;
-        for (auto[k,l] : lost)
-        {
-            if (l == 0) zero.push_back(k);
-            if (l == 1) ones.push_back(k);
+        for(auto it:map){
+            auto [win,loss]=it.second;
+            int player=it.first;
+            if(loss==0)l0.push_back(player);
+            else if(loss==1)l1.push_back(player);
         }
-        
-        return {zero,ones};
-        
+        // we can use map in place of unordered_map for sorted order
+        // sort(l0.begin(),l0.end());
+        // sort(l1.begin(),l1.end());
+        return {l0,l1};
     }
 };
