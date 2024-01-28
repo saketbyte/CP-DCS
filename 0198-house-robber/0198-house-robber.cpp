@@ -1,20 +1,20 @@
 class Solution {
 public:
-    
-      int rob(vector<int>& arr)
-    {
-        vector<int> dp(arr.size(),-1);
-        int n = arr.size();
-        dp[0]=arr[0];
-
-        for(int i=1;i<n;i++){
-            int left = arr[i] ;
-            if(i>1) left+=dp[i-2];
-            int right = 0 + dp[i-1];
-
-            dp[i] = max(left, right);
+    int rob(vector<int>& nums) {
+        int n = nums.size();
+        int prev1 = nums[0];
+        int prev = 0;
+        int curri = 0;
+        for (int i = 1; i < n; i++)
+        {
+            int pick = nums[i];
+            if (i > 1)
+                pick = pick + prev;
+            int notPick = 0 + prev1;
+            curri = max(pick, notPick);
+            prev = prev1;
+            prev1 = curri;
         }
-        return  dp[n-1];
-    
+        return prev1;
     }
 };
