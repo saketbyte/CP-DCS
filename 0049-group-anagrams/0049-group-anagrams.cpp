@@ -1,9 +1,7 @@
 class Solution {
 public:
     vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        
-        
-          // Base case
+        // Base case
 		if(strs.size() == 1)
             return {{strs[0]}};
         
@@ -18,6 +16,5 @@ public:
         for(auto i = M.begin(); i != M.end(); i++)
             ans.push_back(i -> second);  // Traversing the map and adding the vectors of string to ans
         return ans;
-        
     }
 };
