@@ -1,24 +1,17 @@
 class Solution {
 public:
-
-        
-        int numSquares(int n) {
-        vector<int> squares;
-        int p = 1, curr = 1;
-        
-        while (curr <= n) {
-            curr = pow(p++, 2);
-            squares.push_back(curr);
+    int numSquares(int n) {
+           vector<int> dp(n+1,INT_MAX);
+        //base case
+        dp[0]=0;
+        int count = 1;
+        while(count*count <= n) {
+        int sq = count*count;
+        for(int i = sq; i < n+1; i++) {
+            dp[i] = min(dp[i-sq] + 1,dp[i]);
         }
-        
-        vector<int> dp(n+1, n+1);
-        dp[0] = 0;
-        
-        for (int i = 1; i <= n; i++)
-            for (auto s : squares)
-                if (s <= i) dp[i] = min(dp[i], dp[i-s]+1);
-
-        return dp[n];
-        
+        count++;
+    }
+    return dp[n];
     }
 };
