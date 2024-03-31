@@ -11,25 +11,16 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        // cout<<"Function call with head as "<<head->val;
-        cout<<" Addressed at"<<head<<endl;
-      
-        if(head == NULL || head->next == NULL) 
-        {
-            // cout<<"base case returned at head val = "<<head->val<<" with address "<<head<<endl;
-            
-            return head;
-        }
         
-        ListNode* newHead = reverseList(head->next);
-         cout<<"Tail recursion while backtracking = "<<head->val;
-        cout<<" Addressed at"<<head<<endl;        
-        head->next->next = head;
-        cout<<" Above step was"<<head->next<<"="<<head->next->next<<endl;
+        if(!head||!head->next ) return head; 
+        
+        ListNode* lastNode = reverseList(head->next);
+        
+        (head->next)->next = head;
         head->next = NULL;
-        cout<<"------end------"<<endl;
-        return newHead;
-       
+        
+        return lastNode;       
+        
         
     }
 };
