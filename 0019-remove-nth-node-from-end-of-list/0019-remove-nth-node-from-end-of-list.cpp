@@ -19,20 +19,16 @@ public:
             temp = temp->next;
             length++;
         }
-        cout<<"length "<<length<<endl;
-        if(length==1) return nullptr;
         int n_compliment = length-n-1;
+        
+        // edge case
         if(n_compliment==-1) return head->next;
-        cout<<"n' "<<n_compliment<<endl;
         temp = head;
-        cout<<"TEMP "<<endl;
         while(n_compliment>0)
         {
-            cout<<"temp "<<temp->val;
             temp = temp->next;
             n_compliment--;
         }
-        cout<<"tobedeleted "<<temp->next->val<<endl;
         ListNode *toBeDeleted = temp->next;
         temp->next = temp->next->next;
         
