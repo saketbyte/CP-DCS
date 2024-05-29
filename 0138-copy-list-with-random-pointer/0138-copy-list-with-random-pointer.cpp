@@ -27,8 +27,8 @@ public:
             temp = temp->next;
         }
         
-        Node* curr = head;
-        // Node *curr = head; WHY DOES THIS NOT WORK??
+        // Node* curr = head;
+        Node *curr = head; 
         if(head==NULL) return head;
         
         while(curr){
