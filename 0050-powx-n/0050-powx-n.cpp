@@ -1,29 +1,27 @@
 class Solution {
 public:
-    double myPow(double x, int n) {
-           // Base condition: If n is 0, x^0 is 1
+    double mypow(double x, int n, double ans) {
         if (n == 0) {
-            return 1;
+            return ans; // Base case
         }
 
-        // Convert n to a long integer to handle the edge case with Integer.MIN_VALUE
-        long N = n;
-
-        // If n is negative, take the reciprocal of x and make N positive
-        if (N < 0) {
-            N = -N;
-            x = 1 / x;
-        }
-
-        // If N is even, recursively compute the square of x^(N/2)
-        if (N % 2 == 0) {
-            return myPow(x * x, (int) (N / 2));
-        } 
-    
-        // If N is odd, recursively compute x^(N-1) and multiply it by x
-        else {
-            return x * myPow(x, (int) (N - 1));
+        if (n % 2 == 1) {
+            return mypow(x, n - 1, ans * x);
+        } else {
+            return mypow(x * x, n / 2, ans);
         }
     }
-    
+
+    double myPow(double x, int n) {
+        double ans = 1;
+        if (x == 0 || x == 1) {
+            return x;
+        }
+        if (n < 0) {
+            ans *= 1 / x;
+            n = -(n + 1);
+            x = 1 / x;
+        }
+        return mypow(x, n, ans);
+    }
 };
