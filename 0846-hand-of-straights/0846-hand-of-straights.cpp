@@ -2,27 +2,24 @@ class Solution {
 public:
     bool isNStraightHand(vector<int>& hand, int gs) {
         
-        
-        if(hand.size()%gs) return false;
-        
-        map<int,int> freq;
-        
-        for(int card: hand)freq[card]++;
-        
-        for(auto it = freq.begin();it!=freq.end();it++)
-        {
-            int card = it->first, count = it->second;
-            
-            if(count>0)
-            {
-                for(int i =0;i<gs;i++)
-                {
-                    if(freq[card+i]<count) return false;
-                    freq[card+i]-=count;
+        int n = hand.size();
+        if(n % gs) return false;
+        map<int,int> mp;
+        for(auto x : hand) mp[x]++;
+        priority_queue<int, vector<int>, greater<>> pq;
+        for(auto x : mp) pq.push(x.first);
+
+        while(!pq.empty()){
+            int first = pq.top();
+            for(int i = first; i < first+gs; i++){
+                if(mp.find(i)==mp.end()) return false;
+                mp[i]--;
+                if(mp[i]==0){
+                    if(i!=pq.top()) return false;
+                    pq.pop();
                 }
             }
         }
-        
         return true;
     }
 };
