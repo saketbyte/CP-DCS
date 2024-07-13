@@ -1,24 +1,37 @@
 class Solution {
 public:
+    
+    
+int min(int a, int b, int c) {
+    int smallest = a; 
+
+    if (b < smallest) 
+        smallest = b; 
+    if (c < smallest) 
+        smallest = c; 
+    
+
+    return smallest; 
+}
     int findContentChildren(vector<int>& g, vector<int>& s) {
         
-        int ans = 0;
+       
         sort(s.begin(),s.end());
         sort(g.begin(),g.end());
         
-      for(int i = 0; i<g.size();i++)
-      {
-         int want = g[i];
-          for(int j = 0;j<s.size();j++)
-          {
-             if(want<=s[j])
-             {
-                 ans++;
-                 s[j]=0;
-                 break;
-             }
-          }
-      }
+        int cookie =0, want =0, ans = 0;
+        
+        while(cookie<s.size() && want<g.size())
+        {
+            if(g[want]<=s[cookie]) {
+                ans++, cookie++, want++;
+            }
+            else {
+                cookie++;
+            }
+        }
+     
+        // int ans = min(want,g.size(),s.size());
         
         return ans;
     }
